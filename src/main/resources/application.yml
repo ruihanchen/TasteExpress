@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: TasteExpress
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+      ddl-auto: none
+
+    open-in-view: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/taste_express
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  servlet:
+    #无论是前端/服务器端/配置文件 进行配置 都会涉及到这个关键字  multipart
+    multipart:
+      #单个文件最大为 10MB
+      max-file-size: 10MB
+      #一个请求当中可以上传多个文件，max-request:包括所有文件和表单数据的总和 不能超过这个大小
+      max-request-size: 100MB
+
+taste-express:
+  jwt:
+    admin-secret-key: TasteExpress
+    admin-ttl: 7200000
+    admin-token-name: token
+
+    user-secret-key: TasteExpress
+    user-ttl: 7200000
+    user-token-name: token
+  aws:
+
+
+

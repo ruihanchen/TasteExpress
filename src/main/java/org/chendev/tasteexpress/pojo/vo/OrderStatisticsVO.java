@@ -1,0 +1,17 @@
+package org.chendev.tasteexpress.pojo.vo;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class OrderStatisticsVO {
+    //待接单数量
+    private Integer toBeConfirmed;
+
+    //待派送数量
+    private Integer confirmed;
+
+    //派送中数量
+    private Integer deliveryInProgress;
+}

@@ -1,0 +1,13 @@
+package org.chendev.tasteexpress.server.repository;
+
+import org.chendev.tasteexpress.pojo.entity.OrderDetail;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface OrderDetailRepository extends JpaRepository<OrderDetail, Long> {
+
+    List<OrderDetail> findByOrderId(Long orderId);
+
+    long deleteByOrderId(Long orderId);
+}
