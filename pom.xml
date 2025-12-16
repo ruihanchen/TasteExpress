@@ -35,7 +35,6 @@
     </properties>
 
     <dependencies>
-        <!-- Web 基础 & 校验 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -109,7 +108,6 @@
 
     <build>
         <plugins>
-            <!-- parent 已经帮你管了绝大多数插件版本；这里补上编译 release 与 build-info -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -132,7 +130,6 @@
                 </configuration>
             </plugin>
 
-            <!-- 生成 /actuator/info 的构建信息，面试 demo 时直观 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
